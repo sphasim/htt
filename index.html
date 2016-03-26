@@ -2,22 +2,319 @@
 layout: default
 ---
 
-<div class="home">
+    <!-- Carousel
+    ================================================== -->
+    <!-- Can I use parallax in carousel. How?--> 
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner" role="listbox">
+    
 
-  <h1 class="page-heading">Posts</h1>
+            {% for post in site.posts limit:1 %}
+      
+      <div class="item active">
+          <img src="" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>{{ post.title }}</h1>
+              {{ post.excerpt }}
+              <p>
+                  <a class="btn btn-lg btn-primary" href="{{ post.url | prepend: site.baseurl }}" role="button">
+                  {{ post.date | date: "%b %-d, %Y" }}
+                  </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      
+          {% endfor %}
+          
+          {% for post in site.posts offset: 1 %}
+      
+      <div class="item">
+          <img src="" alt="">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>{{ post.title }}</h1>
+              {{ post.excerpt }}
+              <p>
+                  <a class="btn btn-lg btn-primary" href="{{ post.url | prepend: site.baseurl }}" role="button">
+                  {{ post.date | date: "%b %-d, %Y" }}
+                  </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      
+          {% endfor %}
+          
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+  <!-- <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p> -->
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+        </div>
+      <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div><!-- /.carousel -->
 
-</div>
+<div><!--wrapper end-->
+<!--about us-->
+  <section class="aboutus" id="aboutus">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+    <div class="heading text-center">
+      <img class="dividerline" src="img/sep.png" alt="">
+      <h2>About Boostrap 4 Alpha</h2>
+
+      <img class="dividerline" src="img/sep.png" alt="">
+      <h3><mark>Bootstrap</mark> is the world’s most popular framework for building responsive, mobile-first sites and applications. Inside you’ll find high quality HTML, CSS, and JavaScript to make starting any project easier than ever. On <mark>August 19</mark>, Bootstrap 4 alpha was released with the removal of support for IE8. Of course, there are still going to be a couple of alphas before they move to the beta phase, but this gives us a glimpse on what to expect on the next versions.</h3>
+      </div>  
+      </div>    
+    </div>      
+    <div class="row">
+      <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="img/card1.jpg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">This is Card #1</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="http://v4-alpha.getbootstrap.com/components/card/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="col-md-3">
+      <div class="card card-success text-center">
+        <img class="card-img-top" src="img/card2.jpg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">This is Card #2</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="http://v4-alpha.getbootstrap.com/components/card/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div> -->
+
+
+    <div class="col-md-4">
+      <div class="card card-inverse card-success text-center">
+        <img class="card-img-top" src="img/card3.jpg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">This is Card #3</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="http://v4-alpha.getbootstrap.com/components/card/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="card card-inverse card-primary text-xs-center">
+        <img class="card-img-top" src="img/card4.jpg" alt="Card image cap">
+        <div class="card-block">
+          <h4 class="card-title">This is Card #4</h4>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="http://v4-alpha.getbootstrap.com/components/card/" class="btn btn-primary">Learn More</a>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </div>
+  </section>
+
+<!-- Feature -->
+  <section class="features" id="features">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+    <div class="heading text-center">
+      <img class="dividerline" src="img/sep.png" alt="">
+      <h2>Enhanced Features</h2>
+      <img class="dividerline" src="img/sep.png" alt="">
+      <h3><a href="#" data-toggle="tooltip" title="This is a tooltip">Bootstrap 4 alpha</a> has a new prefix <a href="#" data-toggle="tooltip" title="Make all backgrounds black!">–inverse</a> class that gives a background to the table itself. Another cool thing about this is the improve tooltips and popovers which help a lot of developers when it comes to ease of use. Thanks to <a href="#" data-toggle="tooltip" title="Tether is a JavaScript library for efficiently making an absolutely positioned element stay next to another element on the page. For example, you might want a tooltip or dialog to open, and remain, next to the relevant item on the page.">Tether</a> , a third party library it has improved. </h3>
+    </div>
+    </div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <table class="table table-inverse">
+          <thead>
+          <tr><th colspan="3" class="text-center">Bootstrap 3</th> </tr>
+            <tr>
+              <th>Size</th>
+              <th>Device</th>
+              <th>Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Extra Small</td>
+              <td>Less than 768px</td>
+              <td>col-xs</td>
+            </tr>
+
+            <tr>
+              <td>Small</td>
+              <td>768px and up</td>
+              <td>col-sm</td>
+            </tr>
+
+            <tr>
+              <td>Medium</td>
+              <td>992px and up</td>
+              <td>col-md</td>
+            </tr>
+
+            <tr>
+              <td>Large</td>
+              <td>1200px and up</td>
+              <td>col-lg</td>
+            </tr>
+
+
+          </tbody>
+          </table>
+      </div>
+
+      <div class="col-md-6">
+        <table class="table table-inverse">
+          <thead>
+          <tr><th colspan="3" class="text-center">Bootstrap 4</th> </tr>
+            <tr>
+              <th>Size</th>
+              <th>Device</th>
+              <th>Class</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Extra Small</td>
+              <td>Less than 34em</td>
+              <td>col-xs</td>
+            </tr>
+
+            <tr>
+              <td>Small</td>
+              <td>34em and up</td>
+              <td>col-sm</td>
+            </tr>
+
+            <tr>
+              <td>Medium</td>
+              <td>48em and up</td>
+              <td>col-md</td>
+            </tr>
+
+            <tr>
+              <td>Large</td>
+              <td>62em and up</td>
+              <td>col-lg</td>
+            </tr>
+
+            <tr>
+              <td>Extra Large</td>
+              <td>75em and up</td>
+              <td>col-xl</td>
+            </tr>
+
+          </tbody>
+          </table>
+      </div>
+
+
+  </div>
+  </div>
+  </section>
+
+  <!--Contact Us-->
+  <section class="contact" id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+    <div class="heading">
+        <img class="dividerline" src="img/sep.png" alt="">
+        <h2>Contact Us</h2>
+        <img class="dividerline" src="img/sep.png" alt="">
+        <h3>Feel free to reach out for any questions!
+        </h3>
+      </div>
+    </div>
+    </div>
+  </div>
+   <div class="container mx-width">
+      <div class="row">
+    <div class="done">
+      <div class="alert alert-success">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        Your message has been sent. Thank you!
+      </div>
+    </div>
+
+       <div class="col-md-12">
+            <form>
+                <fieldset class="form-group">
+                    <input type="text" class="form-control" id="Name" placeholder="Name">
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <input type="email" class="form-control" id="Email" placeholder="Email">
+                </fieldset>
+
+                <fieldset class="form-group">
+                    <textarea class="form-control" rows="3" placeholder="Message"></textarea>
+                </fieldset>
+                
+                <button type="submit" class="contact submit">Submit</button>
+            </form>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  
+  <!--footer-->
+  <section class="footer" id="footer">
+  
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+    <ul>  
+      <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+
+    </ul>
+  </div>
+    </div>
+      </div>
+  </section>
+  </div><!--wrapper end-->
+
+  <!-- JavaScripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js"></script>
+
+<script type="text/javascript">
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})  
+</script>
+
+

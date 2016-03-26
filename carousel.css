@@ -1,0 +1,395 @@
+/* GLOBAL STYLES
+-------------------------------------------------- */
+/* Padding below the footer and lighter body text */
+
+body {
+  /*margin-top: 38px;*/
+  padding-bottom: 40px;
+  color: #5a5a5a;
+  padding-top: 50px
+  font-family:'Lato', sans-serif;
+    font-size:1em;
+    color:#777;
+    font-weight:300;
+    line-height:1.7;
+    overflow-x:hidden;
+}
+
+
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+
+
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
+
+/* Carousel base class */
+.carousel {
+  height: 550px;
+  margin-bottom: 10px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  margin-bottom: 70px;
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 550px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;
+}
+
+
+/* MARKETING CONTENT
+-------------------------------------------------- */
+
+/* Center align the text within the three columns below the carousel */
+.marketing .col-lg-4 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.marketing h2 {
+  font-weight: normal;
+}
+.marketing .col-lg-4 p {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+
+/* Featurettes
+------------------------- */
+
+.featurette-divider {
+  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+}
+
+/* Thin out the marketing headings */
+.featurette-heading {
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+
+/* RESPONSIVE CSS
+-------------------------------------------------- */
+
+@media (min-width: 768px) {
+  /* Navbar positioning foo */
+  .navbar-wrapper {
+    margin-top: 20px;
+  }
+  .navbar-wrapper .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+  .navbar-wrapper .navbar {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  /* The navbar becomes detached from the top, so we round the corners */
+  .navbar-wrapper .navbar {
+    border-radius: 4px;
+  }
+
+  /* Bump up size of carousel content */
+  .carousel-caption p {
+    margin-bottom: 0px;
+    font-size: 21px;
+    line-height: 1.4;
+  }
+
+  .featurette-heading {
+    font-size: 50px;
+  }
+  .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
+}
+
+@media (min-width: 992px) {
+  .featurette-heading {
+    margin-top: 120px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6 {
+    color:#333;
+    line-height:1.4;
+    font-weight:700;
+}
+
+.mx-width {
+    max-width:960px;
+    margin:0 auto;
+}
+
+a,a:hover {
+    color:#563d7c;
+    text-decoration:none;
+}
+
+img{
+  /*courses white line across the carousel*/
+  /*width:100%;*/
+  max-width: 100%;
+  height:auto;
+}
+
+.card-img-top{
+  width:100%;
+  height:auto;
+}
+
+header {
+    padding-bottom:50px;
+}
+
+.display-2 {
+    font-family:'Lato';
+    font-size:60px;
+    line-height:1;
+    font-weight:300;
+    color:#fff
+}
+
+.learn {
+    font-family:'Lato';
+    font-size:27px;
+    line-height:1.4;
+    font-weight:300;
+    color:#fff;
+}
+
+.jumbotron-fluid {
+    padding:0;
+}
+
+
+/* PARALLAX
+-------------------------------------------------*/
+.parallax {
+    text-align:center;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed!important;
+    overflow:hidden;
+}
+
+.parallax-pattern-overlay {
+    background-image:url(../img/pattern.png);
+    background-repeat:repeat;
+}
+
+#size-banner{
+    height:580px;
+    padding-top:170px;
+}
+
+
+/* HEADING
+-------------------------------------------------*/
+.heading {
+    padding-bottom:15px;
+    text-align:center;
+    max-width:960px;
+    margin:0 auto;
+    padding-top:80px;
+}
+
+.heading h2 {
+    font-weight:600;
+    font-family:'Raleway';
+    font-size:40px;
+    color:#333;
+    margin:0;
+    padding:5px;
+}
+
+
+.heading h3 {
+    font-size:1em;
+    line-height:1.7;
+}
+
+#site-title {
+    max-width:150px;
+}
+
+
+/* CONTACT
+-------------------------------------------------*/
+input.form-control {
+    background:#fff;
+    border:solid 1px #ddd;
+    color:#000;
+    padding:15px 30px;
+    margin-right:3%;
+    margin-bottom:30px;
+    outline:none;
+    border-radius: 0;
+}
+
+
+
+textarea.form-control {
+    background:#fff;
+    color:#000;
+    border:solid 1px #ddd;
+    padding:15px 30px;
+    margin-bottom:40px;
+    outline:none;
+    height:200px;
+    border-radius: 0;
+}
+
+button.contact.submit {
+    background:#333;
+    font-family:'Lato',sans-serif;
+    color:#fff;
+    font-size:1em;
+    font-weight:400;
+    text-align:center;
+    margin:0;
+    border:none!important;
+    border-radius:3px;
+    padding:15px 45px;
+}
+
+button.contact.submit:hover {
+    background:#563d7c;
+}
+
+.form-control:focus{
+    border-color: #563d7c;
+    outline: 0;
+}
+
+
+.done {
+    display:none;
+}
+
+
+/* FOOTER
+-------------------------------------------------*/
+.footer {
+    background:#563d7c;
+    margin-top:120px;
+    position:relative
+}
+
+.footer .container {
+    padding:60px 0 20px;
+}
+
+.footer ul {
+    margin:0 auto;
+    margin-bottom:30px;
+    margin-top:10px;
+    text-align:center;
+    list-style-type:none;
+    padding-left:0;
+}
+
+.footer ul li {
+  text-align:center;
+    display:inline-block;
+    background:rgba(0,0,0,0.2);
+    color:#fff;
+    line-height:45px;
+    margin:0 4px;
+    width:45px!important;
+    height:45px!important;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+}
+
+.footer ul li:hover {
+    background:#2a2a2a;
+}
+
+.footer ul li:hover a {
+    color:#fff;
+}
+
+.footer ul li a {
+    color:#fff;
+    width:42px!important;
+    height:42px!important;
+}
+
+.footer ul li a i {
+    line-height:45px;
+    color:#fff;
+}
+
+.footer p {
+    color:#fff;
+    font-size:.9em;
+    line-height:24px;
+    font-weight:300;
+    text-align:center;
+    text-transform:uppercase;
+}
+
+.footer a,.footer a:hover {
+    color:#fff;
+}
+
+
+/* MEDIA QUERIES
+-------------------------------------------------*/
+
+@media screen and (max-width:768px) {
+
+input.contact.col-md-6{
+    width:40.5%;
+    margin: 15px 15px 0 58px;
+}
+
+textarea.contact.col-md-12 {
+     margin: 15px 15px 0 58px;
+}
+
+button#submit.contact.submit{
+    margin: 15px 15px 0 42px;
+}
+
+}
